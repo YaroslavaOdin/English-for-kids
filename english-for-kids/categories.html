@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "ru">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="base-style.css">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                let modeApplication = getCookie('mode_application');
+                let elemButton = document.getElementById('switch');
+                if(modeApplication == 'mode_play') {
+                    elemButton.checked = true;
+                    changeStyleDocument();
+                };
+            });
+        </script>
+	</head>
+	<body>
+        <script src="sourceMaps.js"></script>
+		<script src="menu.js"></script>
+		<script src="innerCategorySection.js"></script>
+        <script src="startGame.js"></script>
+        <script src="reverseAudioplay.js"></script>
+    </body>
+</html>
