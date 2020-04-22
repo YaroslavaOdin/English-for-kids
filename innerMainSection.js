@@ -14,15 +14,17 @@ function addElementMainSection() {
     newSection.prepend(newDiv1);
 
     for(let i = 1; i < 9; i++) {
-    	let newDiv2 = document.createElement('div');
-    	newDiv2.classList.add('main_card');
-    	newDiv1.append(newDiv2);
+
 
 		let newA1 = document.createElement('a');
-    	newA1.setAttribute('href', 'categories.html');
+		newA1.setAttribute('href', 'categories.html');
+		newA1.classList.add('main_card');
     	newA1.setAttribute('onclick', "setCookie('category', '" + arrCategory[i-1] + "')"); 
-    	newA1.setAttribute('style', 'text-decoration: none;');
-    	newDiv2.append(newA1);
+		newA1.setAttribute('style', 'text-decoration: none;');
+		newDiv1.append(newA1);
+		
+		let newDiv2 = document.createElement('div');
+    	newA1.append(newDiv2);
 
     	let newDiv3 = document.createElement('div');
     	newDiv3.setAttribute('id', 'id_card_gard_' + i);
